@@ -38,15 +38,16 @@ for (let callButton of callBtn) {
         if (coins >= 20) {
             const title = callButton.parentNode.parentNode.parentNode.childNodes[3].innerText;
             const number = callButton.parentNode.parentNode.parentNode.childNodes[7].innerText;
+            console.log(title, number)
             const time = new Date().toLocaleTimeString();
 
             const cardContainer = document.getElementById("card-container");
             const newCard = document.createElement("div");
 
-            newCard.innerHTML = `< div class= "flex justify-between items-center border-2 border-white bg-[#FAFAFA] rounded-xl m-2 " >
+            newCard.innerHTML = `<div class= "flex justify-between items-center border-2 border-white bg-[#FAFAFA] rounded-xl m-2 " >
     <div class="p-2">
-    <h2 class="font-semibold text-[14px]">"${title}"</h2>
-    <p>"${number}"</p >
+    <h2 class="font-semibold text-[14px]">${title}</h2>
+    <p>${number}</p >
 </div >
         <div class="p-2">
            ${time}
